@@ -75,8 +75,11 @@ GENERIC STM32F103C
 #define default_paddle_interruption_quiet_time_element_lengths 0
 #define default_wordsworth_wordspace 6
 #define default_wordsworth_repetition 1
-#define serial_program_memory_buffer_size 1000
-#define eeprom_write_time_ms 30000
+#define serial_program_memory_buffer_size 500
+#define eeprom_write_time_ms 5000//30000
+
+#define memory_flash_size 255 //ik2biy
+#define ext_eeprom_size 1024 //ik2biy
 
 #ifdef FEATURE_BUTTONS
   #define analog_buttons_number_of_buttons 1 // For Keypad only command butrton is neaded 6 //4  // includes the command button (command button + 3 memory buttons = 4) //sp5iou 20180319
@@ -89,7 +92,7 @@ GENERIC STM32F103C
   #define number_of_memories byte(analog_buttons_number_of_buttons-1)
 #else
 //  #define number_of_memories byte(12)
-  #define number_of_memories byte(9) //sp5iou 20180329 With many memories, be carefull to not put to much content. It caould disable memory programming and eeprom formatting is then necessary
+  #define number_of_memories byte(4) //sp5iou 20180329 With many memories, be carefull to not put to much content. It caould disable memory programming and eeprom formatting is then necessary
 #endif
 
 #ifdef FEATURE_CAPACITIVE_PADDLE_PINS

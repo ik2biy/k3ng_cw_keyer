@@ -409,6 +409,3 @@ const char* const eu_prefix_table[] PROGMEM = {
 	eu_prefix_190/*,
 	eu_prefix_191*/
 	};
-
-
-
